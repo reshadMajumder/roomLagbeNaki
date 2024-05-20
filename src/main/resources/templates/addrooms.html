@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--favicon-->
+    <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
+    <!--plugins-->
+    <link
+            href="assets/plugins/OwlCarousel/css/owl.carousel.min.css"
+            rel="stylesheet"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link
+            href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css"
+            rel="stylesheet"
+    />
+    <!-- loader-->
+    <link href="assets/css/pace.min.css" rel="stylesheet" />
+    <script src="assets/js/pace.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+    />
+    <link href="assets/css/app.css" rel="stylesheet" />
+    <link
+            href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+            rel="stylesheet"
+    />
+    <link href="assets/css/icons.css" rel="stylesheet" />
+    <title>Room Lagbe naki</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+<section class="">
+    <div class="container">
+        <div class="section-authentication-signin d-flex align-items-center justify-content-center my-5">
+            <div class="row row-cols-1 row-cols-xl-2">
+                <div class="col mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="border p-4 rounded">
+                                <div class="text-center">
+                                    <h3 class="">Post Your Ad</h3>
+                                </div>
+
+                                <div class="login-separater text-center mb-4"> <span>ENTER VALID INFORMATIONS</span>
+                                    <hr/>
+                                </div>
+                                <div class="form-body">
+                                    <form class="row g-3" enctype="multipart/form-data" th:action="@{/do-add}" method="POST">
+                                        <div class="col-12">
+                                            <label for="inputImage" class="form-label">Image</label>
+                                            <input type="file" class="form-control" id="inputImage" name="imageUrl">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputTitle"  name="inputTitle" class="form-label">Title</label>
+                                            <input type="text" class="form-control" id="inputTitle" name="title">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputPrice" name="inputPrice" class="form-label">Price</label>
+                                            <input type="text" class="form-control" id="inputPrice" name="price">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputDivition" name="inputDivition" class="form-label">Divition</label>
+                                            <input type="text" class="form-control" id="inputDivition" name="divition">
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="inputCity" name="inputCity"  class="form-label">City/area</label>
+                                            <input type="text" class="form-control" id="inputCity" name="city">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputAddress" name="inputAddress" class="form-label">Address</label>
+                                            <input type="text" class="form-control" id="inputAddress" name="address">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputDescription" name="inputDescription" class="form-label">Description</label>
+                                            <input type="text" class="form-control" id="inputDescription" name="description">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputRoomType" name="inputRoomType" class="form-label">Room Type</label>
+                                            <input type="text" class="form-control" id="inputRoomType" name="roomtype">
+                                        </div>
+
+
+
+                                        <div class="col-12">
+                                            <div class="d-grid">
+                                                <button type="submit" class="btn btn-dark">POST</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end row-->
+        </div>
+    </div>
+</section>
