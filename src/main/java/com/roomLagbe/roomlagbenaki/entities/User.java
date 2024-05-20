@@ -1,10 +1,8 @@
 package com.roomLagbe.roomlagbenaki.entities;
 
 import jakarta.persistence.*;
-import org.springframework.data.util.Lazy;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
