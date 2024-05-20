@@ -100,7 +100,7 @@
                                 <div class="col">
                                     <div class="card">
                                         <!-- Placeholder for room image -->
-<!--                                        <img th:src="${room.imageUrl}" class="card-img-top" alt="Room Image">-->
+                                        <img th:src="@{/img/{imageName}(imageName=${room.imageUrl})}" class="card-img-top" alt="Room Image">
                                         <div class="card-body">
                                             <h5 class="card-title" th:text="${room.title}">Room Name</h5>
                                             <p class="card-text" th:text="'Price: $' + ${room.price}">Price: $XX.XX</p>

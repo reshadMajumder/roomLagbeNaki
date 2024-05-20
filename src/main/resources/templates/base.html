@@ -58,7 +58,7 @@
                                 />
                             </div>
                             <div class="logo">
-                                <a href="index.html">
+                                <a th:href="@{/}">
                                     <img
                                             src="assets/images/logo-icon.png"
                                             class="logo-icon"
@@ -86,7 +86,7 @@
                                 <ul class="navbar-nav">
 
                                     <li class="nav-item">
-                                        <a href="login.html" class="nav-link cart-link"
+                                        <a th:href="@{/register}" class="nav-link cart-link"
                                         ><img
                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAchJREFUSEu1lTtPVUEUhb8VaxOJRo1EGwosrfgBxhcaSyFW/AITgiRYGeiESLSwpwUt1Uh4WdraGQsaDChGo1FLyPLsZCDXwx3mesidds5e336s2Ud0+ajL+nQEsH27SmQS6EsJrQMPJb0uJVgE2J4AHmWExiXNHgY5FGD7OrAIfAECtJTErgHTwFngiqTVHKQEWA4BYFjS81YR20PAAvBG0s2mgB/ACeC4pD81wEngG7AlqbcpYBs4DZyS9D0D2JYUrWp7Si2Knl8FhiS9yLRoUdJgU0DrkMeBmMmxBJ0BzhxpyJGV7TEgxEK49ewCYdOnjW26F2i7H7gPhD13gLVq8LOSPh75oZUESvfZIdsOe0bWA8Cl5KZWva/Ae+BdquZ3O1hbgO1wxVwaYinJuN8CRiSt1D8+ALB9C3iVPnwJTAHrkn7WbBoVxvKL+4iJMygpVsv++Qdgu6daCx9S5tOSHnSSvu3HqZ2fgYuSfu3F1QGjwBPgraTLnYgnK4dOPMrYW/ckPcsBYqHdKT2edmDbN2LxVRXMV/a9mwNsAOeBnnrPS9XYPgdsAp8kXcgBHBeSij+iTBUH4hsJlarJuuh/Ajv9tusV/AXpWpsZNntrxAAAAABJRU5ErkJggg=="
                                         /></a>
@@ -107,9 +107,13 @@
                         id="offcanvasNavbar"
                 >
                     <div class="offcanvas-header">
-                        <div class="offcanvas-logo">
-                            <img src="assets/images/logo-icon.png" width="100" alt="" />
-                        </div>
+                        <a th:href="@{/}">
+                            <img
+                                    src="assets/images/logo-icon.png"
+                                    class="logo-icon"
+                                    alt=""
+                            />
+                        </a>
                         <button
                                 type="button"
                                 class="btn-close text-reset"

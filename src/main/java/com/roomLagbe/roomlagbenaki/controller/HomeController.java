@@ -15,14 +15,20 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 @Controller
 public class HomeController {
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private RoomRepository roomRepository;
     @GetMapping("/")
-    public String home(){
+    public String home(Model model){
+        List<Room> rooms= this.roomRepository.findAll();
+        model.addAttribute("rooms", rooms);
         return "index";
     }
 

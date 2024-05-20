@@ -157,7 +157,7 @@
              
                 <a href="javascript:;">
                   <img
-                    src="assets/images/banners/01.png"
+                    src="assets/images/banners/01.jpg"
                     class="img-fluid"
                     alt="..."
                   />
@@ -221,137 +221,25 @@
                   <!-- product start  -->
                   <div class="product-grid">
                     <div class="row row-cols-2 row-cols-md-4 g-3 g-sm-4">
-                 
-                      <div class="col">
-                        <div class="card">
-                          <div class="position-relative overflow-hidden">
-                          
-                            <div
-                              class="quick-view position-absolute start-0 bottom-0 end-0"
-                            >
-                              <a
-                                href="product-details.html"
-                                >Quick View</a
-                              >
-                            </div>
-                            <a href="product-details.html">
-                              <img
-                                src="assets/images/products/04.jpg"
-                                class="img-fluid zoom-in"
-                                alt="..."
-                              />
-                            </a>
-                          </div>
-                          <div class="card-body px-0">
-                            <div
-                              class="d-flex align-items-center justify-content-center"
-                            >
-                              <div class="">
-                                <h6 class="mb-0 fw-bold product-short-title">
-                                  White Polo Shirt
-                                </h6>
-                              </div>
-                            </div>
+                        <!-- Iterate over each room -->
+                        <div th:each="room : ${rooms}">
+                            <div class="col">
+                                <div class="card">
+                                    <!-- Placeholder for room image -->
+                                    <img th:src="@{/img/{imageName}(imageName=${room.imageUrl})}" class="card-img-top" alt="Room Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title" th:text="${room.title}">Room Name</h5>
+                                        <p class="card-text text-muted mb-1" th:text="${room.divition + ', ' + room.city}">Location</p>
 
-                            <div
-                              class="product-price d-flex align-items-center justify-content-center gap-2 mt-2"
-                            >
-                              <div class="h6 fw-bold text-danger">৳48.00</div>
+                                        <p class="card-text" th:text="'Price: $' + ${room.price}">Price: $XX.XX</p>
+                                        <!-- You can add more details here -->
+                                        <a th:href="@{'/room-details/' + ${room.r_id}}" class="btn btn-primary">Book Now</a>
+                                      </div>
+                                </div>
                             </div>
-                          </div>
                         </div>
-                      </div>
-                      <div class="col">
-                        <div class="card">
-                          <div class="position-relative overflow-hidden">
-                          
-                            <div
-                              class="quick-view position-absolute start-0 bottom-0 end-0"
-                            >
-                              <a
-                                href="product-details.html"
-                                >Quick View</a
-                              >
-                            </div>
-                            <a href="product-details.html">
-                              <img
-                                src="assets/images/products/04.jpg"
-                                class="img-fluid zoom-in"
-                                alt="..."
-                              />
-                            </a>
-                          </div>
-                          <div class="card-body px-0">
-                            <div
-                              class="d-flex align-items-center justify-content-center"
-                            >
-                              <div class="">
-                                <h6 class="mb-0 fw-bold product-short-title">
-                                  White Polo Shirt
-                                </h6>
-                              </div>
-                            </div>
-
-                            <div
-                              class="product-price d-flex align-items-center justify-content-center gap-2 mt-2"
-                            >
-                              <div class="h6 fw-bold text-danger">৳48.00</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card">
-                          <div class="position-relative overflow-hidden">
-                          
-                            <div
-                              class="quick-view position-absolute start-0 bottom-0 end-0"
-                            >
-                              <a
-                                href="product-details.html"
-                                >Quick View</a
-                              >
-                            </div>
-                            <a href="product-details.html">
-                              <img
-                                src="assets/images/products/04.jpg"
-                                class="img-fluid zoom-in"
-                                alt="..."
-                              />
-                            </a>
-                          </div>
-                          <div class="card-body px-0">
-                            <div
-                              class="d-flex align-items-center justify-content-center"
-                            >
-                              <div class="">
-                                <h6 class="mb-0 fw-bold product-short-title">
-                                  White Polo Shirt
-                                </h6>
-                              </div>
-                            </div>
-
-                            <div
-                              class="product-price d-flex align-items-center justify-content-center gap-2 mt-2"
-                            >
-                              <div class="h6 fw-bold text-danger">৳48.00</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-
-
-
-
-
-
-
-
-
                     </div>
-                    <!--end row-->
-                  </div>
+                </div>
 
                   <hr />
                 </div>

@@ -9,6 +9,7 @@ public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int r_id;
+    private String imageUrl;
     private String title;
     private String price;
     private String divition;
@@ -31,7 +32,13 @@ public class Room {
         this.r_id = r_id;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
 
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 
     public String getTitle() {
         return title;
