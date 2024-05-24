@@ -17,7 +17,7 @@ public class Room {
     private String address;
     @Column(length = 500)
     private String description;
-    private String roomtype;
+    private String contactNo;
     @ManyToOne
     private  User user;
 
@@ -88,12 +88,12 @@ public class Room {
         this.description = description;
     }
 
-    public String getRoomtype() {
-        return roomtype;
+    public String getContactNo() {
+        return contactNo;
     }
 
-    public void setRoomtype(String roomtype) {
-        this.roomtype = roomtype;
+    public void setContactNo(String contactNo) {
+        this.contactNo = contactNo;
     }
 
     public User getUser() {
@@ -114,7 +114,7 @@ public class Room {
                 ", city='" + city + '\'' +
                 ", address='" + address + '\'' +
                 ", description='" + description + '\'' +
-                ", roomtype='" + roomtype + '\'' +
+                ", roomtype='" + contactNo + '\'' +
                 ", user=" + user +
                 '}';
     }

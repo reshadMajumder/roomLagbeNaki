@@ -93,6 +93,7 @@
                     </div>
                   </div>
 
+                    <!-- product start  -->
                     <div class="product-grid">
                         <div class="row row-cols-2 row-cols-md-4 g-3 g-sm-4">
                             <!-- Iterate over each room -->
@@ -103,9 +104,11 @@
                                         <img th:src="@{/img/{imageName}(imageName=${room.imageUrl})}" class="card-img-top" alt="Room Image">
                                         <div class="card-body">
                                             <h5 class="card-title" th:text="${room.title}">Room Name</h5>
-                                            <p class="card-text" th:text="'Price: $' + ${room.price}">Price: $XX.XX</p>
+                                            <p class="card-text text-muted mb-1" th:text="${room.divition + ', ' + room.city}">Location</p>
+
+                                            <p class="card-text" th:text="'Price: Tk' + ${room.price}+'/month'">Price: $XX.XX</p>
                                             <!-- You can add more details here -->
-                                            <a href="#" class="btn btn-primary">Book Now</a>
+                                            <a th:href="@{'/room-details/' + ${room.r_id}}" class="btn btn-primary">Book Now</a>
                                         </div>
                                     </div>
                                 </div>

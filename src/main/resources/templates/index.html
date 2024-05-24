@@ -231,7 +231,7 @@
                                         <h5 class="card-title" th:text="${room.title}">Room Name</h5>
                                         <p class="card-text text-muted mb-1" th:text="${room.divition + ', ' + room.city}">Location</p>
 
-                                        <p class="card-text" th:text="'Price: $' + ${room.price}">Price: $XX.XX</p>
+                                        <p class="card-text" th:text="'Price: Tk' + ${room.price}+'/month'">Price: $XX.XX</p>
                                         <!-- You can add more details here -->
                                         <a th:href="@{'/room-details/' + ${room.r_id}}" class="btn btn-primary">Book Now</a>
                                       </div>
